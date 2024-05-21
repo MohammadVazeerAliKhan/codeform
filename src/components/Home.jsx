@@ -83,7 +83,7 @@ export default function Home() {
         sx={{
           position: "fixed",
           zIndex: 9999,
-          top: "52px",
+          top: "68px",
           transform: "translate(-50%)",
           left: open ? drawerWidth : "65px",
           backgroundColor: "darkgray",

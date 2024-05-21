@@ -137,6 +137,16 @@ export default function AddressStep({ handleNext, handleBack }) {
         open={snackbarOpen}
         autoHideDuration={3000}
         onClose={handleSnackbarClose}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "right",
+        }}
+        sx={{
+          bottom: 0,
+          right: 0,
+          transform: "none",
+          msTransform: "none", // For Microsoft Edge
+        }}
       >
         <MuiAlert
           elevation={6}
@@ -147,6 +157,25 @@ export default function AddressStep({ handleNext, handleBack }) {
           Please add valid input data before proceeding!
         </MuiAlert>
       </Snackbar>
+
+      {/* <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={3000}
+        onClose={handleSnackbarClose}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "right",
+        }}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          onClose={handleSnackbarClose}
+          severity="error"
+        >
+          Please add valid input data before proceeding!
+        </MuiAlert>
+      </Snackbar> */}
     </Box>
   );
 }

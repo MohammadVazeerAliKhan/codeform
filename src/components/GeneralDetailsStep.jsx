@@ -188,6 +188,16 @@ export default function GeneralDetailsStep({ handleNext }) {
         open={snackbarOpen}
         autoHideDuration={3000}
         onClose={handleSnackbarClose}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "right",
+        }}
+        sx={{
+          bottom: 0,
+          right: 0,
+          transform: "none",
+          msTransform: "none", // For Microsoft Edge
+        }}
       >
         <MuiAlert
           elevation={6}
