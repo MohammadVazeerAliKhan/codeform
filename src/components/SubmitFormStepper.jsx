@@ -8,7 +8,8 @@ import Typography from "@mui/material/Typography";
 import { Modal, Slide } from "@mui/material";
 
 // Lazy loading for reducing load when initial rendering
-const PayConfigurationStep = lazy(() => import("./PayConfigurationStep"));
+// const PayConfigurationStep = lazy(() => import("./PayConfigurationStep"));
+import PayConfigurationStep from './PayConfigurationStep'
 const AddressStep = lazy(() => import("./AddressStep"));
 const GeneralDetailsStep = lazy(() => import("./GeneralDetailsStep"));
 
@@ -73,9 +74,9 @@ const SubmitFormStepper = memo(function SubmitFormStepper() {
         );
       case 2:
         return (
-          <React.Suspense fallback={<div>Loading...</div>}>
-            <PayConfigurationStep handleNext={handleNext} />;
-          </React.Suspense>
+          // <React.Suspense fallback={<div>Loading...</div>}>
+          <PayConfigurationStep handleNext={handleNext} />
+          // </React.Suspense>
         );
       default:
         return "";
